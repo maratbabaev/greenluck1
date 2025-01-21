@@ -189,7 +189,7 @@ header .container {
   border-radius: 0 16px;
   padding: 0 28px;
   color: rgb(255, 255, 255);
-  text-shadow: 0px 0px 7px #000;
+  text-shadow: -1px -1px 0 var(--stb-button-content-stroke-color, rgb(154, 63, 25)), 1px -1px 0 var(--stb-button-content-stroke-color, rgb(154, 63, 25)), -1px 1px 0 var(--stb-button-content-stroke-color, rgb(154, 63, 25)), 1px 1px 0 var(--stb-button-content-stroke-color, rgb(154, 63, 25)), -1px var(--stb-button-content-shadow-offset, 2px) 0 var(--stb-button-content-shadow-color, rgb(80, 44, 21)), 1px var(--stb-button-content-shadow-offset, 2px) 0 var(--stb-button-content-shadow-color, rgb(80, 44, 21));
 }
 .header__btn span {
   position: relative;
@@ -269,6 +269,10 @@ header .container {
 }
 .sidebar__list a:hover {
   background: rgb(253, 236, 200);
+  color: rgb(164, 112, 0);
+  width: calc(100% + 24px);
+  margin-left: -12px;
+  padding: 0 30px;
 }
 .sidebar__list a:hover:before {
   inset: 0;
@@ -281,6 +285,10 @@ header .container {
 }
 .sidebar__list:nth-child(2) a {
   background: rgb(253, 236, 200);
+  color: rgb(164, 112, 0);
+  width: calc(100% + 24px);
+  margin-left: -12px;
+  padding: 0 30px;
 }
 .sidebar__list:nth-child(2) a:before {
   inset: 0;
@@ -319,7 +327,7 @@ header .container {
   text-align: center;
   font-weight: 800;
   font-size: 12px;
-  text-shadow: 0 0 5px #000;
+  text-shadow: -1px -1px 0 var(--stb-button-content-stroke-color, rgb(154, 63, 25)), 1px -1px 0 var(--stb-button-content-stroke-color, rgb(154, 63, 25)), -1px 1px 0 var(--stb-button-content-stroke-color, rgb(154, 63, 25)), 1px 1px 0 var(--stb-button-content-stroke-color, rgb(154, 63, 25)), -1px var(--stb-button-content-shadow-offset, 2px) 0 var(--stb-button-content-shadow-color, rgb(80, 44, 21)), 1px var(--stb-button-content-shadow-offset, 2px) 0 var(--stb-button-content-shadow-color, rgb(80, 44, 21));
 }
 .sidebar__footer a img {
   width: 24px;
@@ -444,18 +452,19 @@ header .container {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 460px;
-  aspect-ratio: 460/80;
+  width: 406px;
+  aspect-ratio: 406/80;
   background-image: url(../images/primary-left.webp), url(../images/primary-center.webp), url(../images/primary-right.webp);
   background-repeat: no-repeat;
   background-position: left center, center, right center;
   background-size: 48px 100%, calc(100% - 94px) 100%, 48px 100%;
-  text-shadow: 1px 1px 5px rgb(154, 63, 25);
+  text-shadow: -1px -1px 0 var(--stb-button-content-stroke-color, rgb(154, 63, 25)), 1px -1px 0 var(--stb-button-content-stroke-color, rgb(154, 63, 25)), -1px 1px 0 var(--stb-button-content-stroke-color, rgb(154, 63, 25)), 1px 1px 0 var(--stb-button-content-stroke-color, rgb(154, 63, 25)), -1px var(--stb-button-content-shadow-offset, 2px) 0 var(--stb-button-content-shadow-color, rgb(80, 44, 21)), 1px var(--stb-button-content-shadow-offset, 2px) 0 var(--stb-button-content-shadow-color, rgb(80, 44, 21));
   font-size: 28px;
   text-transform: capitalize;
   font-weight: 900;
   color: rgb(255, 255, 255);
   letter-spacing: -5px;
+  padding: 0 0 8px;
 }
 
 .top--menu {
@@ -1007,6 +1016,18 @@ footer:after {
   }
 }
 @media (max-width: 1279px) {
+  .sidebar__list a:hover:before {
+    background-size: 40px 100%, calc(100% - 40px - 40px) 100%, 40px 100%;
+    background-position: left center, 40px center, right center;
+    background-repeat: no-repeat;
+    will-change: opacity;
+  }
+  .sidebar__list:nth-child(2) a:before {
+    background-size: 40px 100%, calc(100% - 40px - 40px) 100%, 40px 100%;
+    background-position: left center, 40px center, right center;
+    background-repeat: no-repeat;
+    will-change: opacity;
+  }
   .burger {
     display: flex;
     align-items: center;
@@ -1299,5 +1320,8 @@ footer:after {
   }
   .footer {
     padding: 0;
+  }
+  .banner__content a {
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
