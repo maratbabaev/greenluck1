@@ -298,7 +298,6 @@ header .container {
   grid-template-columns: repeat(2, 1fr);
   position: sticky;
   bottom: 0;
-  background-color: rgb(247, 232, 189);
   gap: 2px;
   padding: 0 4px;
 }
